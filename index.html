@@ -3,13 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS assessment</title>
+    <title>Streak Counter</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <script defer src="app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </head>
 <body>
-    <div class="main">
+    
+    <div class="container">
+        <div class="main-page">
+            <div class="reveal-button">
+                <ion-icon name="add-circle-outline"></ion-icon>
+            </div>
+
+            <div class="page-content" id="pageContent">
+                <div class="page-head">
+                    <img width="48" height="48" src="https://img.icons8.com/color/48/person-male.png" alt="person-male"/>
+                    <h2>
+                        STREAK COUNTER
+                    </h2>
+                </div>
+                
+               
+               
+            </div>
+      
+        <div class="form-card">
+            <h2>Add New Streak</h2>
+            <form id="streakForm">
+                <div class="form-group">
+                    <label for="name">Activity Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="imageUrl">Image URL</label>
+                    <input type="url" id="imageUrl" required>
+                </div>
+                <div class="form-group">
+                    <label for="startDate">Start Date</label>
+                    <input type="date" id="startDate" required>
+                </div>
+                <button type="submit" class="btn">Add Activity</button>
+            </form>
+        </div>
+
         
+
     </div>
+
+        <div id="message" class="message"></div>
+
+        <div id="activitiesContainer">
+            <div id="noActivities" class="no-activities">
+                No activities added yet
+            </div>
+            <div id="activitiesGrid" class="activities-grid"></div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close"><ion-icon name="close-outline"></ion-icon></span>
+            <h2>Streak Details</h2>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+
 </body>
 </html>
